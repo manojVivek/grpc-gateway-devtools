@@ -1,9 +1,9 @@
-# gRPC-Web Dev Tools
+# gRPC-Gateway Dev Tools
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 
-![gRPC-Web Dev Tools](screenshots/store_light_dark.png)
+![gRPC-Gateway Dev Tools](screenshots/store_light_dark.png)
 Now supports dark mode.
 
 ## Installation
@@ -33,26 +33,12 @@ or
 ## Usage
 
 ```javascript
+import {UnaryCall} from '@protobuf-ts/runtime-rpc';
+
 const enableDevTools = window.__GRPCWEB_DEVTOOLS__ || (() => {});
 const client = new EchoServiceClient('http://myapi.com');
 enableDevTools([
   client,
-]);
+], UnaryCall);
 ```
-> NOTE: Requires that your generated client(s) use `protoc-gen-grpc-web` >= 1.0.4
-
-## Example
- 
-The example uses `docker-compose` to start a simple gRPC server, JavaScript client and the Envoy proxy for gRPC-Web:
-
-```bash
-make example-up
-```
-
-Example will be running on [http://localhost:8080](http://localhost:8080)
-
-To stop the example:
-
-```bash
-make example-down
-```
+> NOTE: Requires that your generated client(s) use `@protobuf-ts`.

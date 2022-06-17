@@ -1,8 +1,8 @@
 {
-  "name": "gRPC-Web Developer Tools",
+  "name": "gRPC-Gateway Developer Tools",
   "version": "1.2.1",
   "manifest_version": 2,
-  "description": "gRPC-Web Developer Tools for debugging application's gRPC-Web network requests.",
+  "description": "gRPC-Gateway Developer Tools for debugging applications' network requests to a gRPC-Gateway backend",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -11,19 +11,13 @@
   "devtools_page": "devtools.html",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["background.js"],
     "persistent": false
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content-script.js"
-      ],
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
       "run_at": "document_start",
       "all_frames": true
     }
