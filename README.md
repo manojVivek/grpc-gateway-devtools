@@ -35,7 +35,7 @@ or
 ```javascript
 import {UnaryCall} from '@protobuf-ts/runtime-rpc';
 
-const enableDevTools = window.__GRPCWEB_DEVTOOLS__ || (() => {});
+const enableDevTools = window.__GRPC_DEVTOOLS__ || (() => {});
 const client = new EchoServiceClient('http://myapi.com');
 enableDevTools([
   client,

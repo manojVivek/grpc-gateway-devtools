@@ -6,7 +6,7 @@ import { ExampleServiceClient, ExampleServicePromiseClient } from './example_grp
 import { ExampleOneRequest, StreamRequest } from './example_pb';
 
 const __DEV__ = true;
-const enableDevTools = window.__GRPCWEB_DEVTOOLS__ || (() => { });
+const enableDevTools = window.__GRPC_DEVTOOLS__ || (() => {});
 
 const body = document.getElementsByTagName('body')
 const client = new ExampleServicePromiseClient('http://0.0.0.0:18080');

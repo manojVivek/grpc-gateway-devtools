@@ -11,15 +11,15 @@ const proto = {};
 proto.s12 = {};
 proto.s12.example = require('./example_pb.js');
 
-window.__GRPCWEB_DEVTOOLS__ = window.__GRPCWEB_DEVTOOLS__ || { services: {} };
+window.__GRPC_DEVTOOLS__ = window.__GRPC_DEVTOOLS__ || { services: {} };
 
-window.__GRPCWEB_DEVTOOLS__.services['/s12.example.ExampleService/ExampleOne'] = {
+window.__GRPC_DEVTOOLS__.services["/s12.example.ExampleService/ExampleOne"] = {
   requestDeserializeFn: proto.s12.example.ExampleOneRequest.deserializeBinary,
-  responseDeserializeFn: proto.s12.example.ExampleOneResponse.deserializeBinary
+  responseDeserializeFn: proto.s12.example.ExampleOneResponse.deserializeBinary,
 };
 
-window.__GRPCWEB_DEVTOOLS__.services['/s12.example.ExampleService/ExampleTwo'] = {
+window.__GRPC_DEVTOOLS__.services["/s12.example.ExampleService/ExampleTwo"] = {
   requestDeserializeFn: example2_pb.ExampleTwoRequest.deserializeBinary,
-  responseDeserializeFn: example2_pb.ExampleTwoResponse.deserializeBinary
+  responseDeserializeFn: example2_pb.ExampleTwoResponse.deserializeBinary,
 };
 
